@@ -5,6 +5,7 @@ FROM node:alpine
 WORKDIR /usr/app
 
 # Install PM2 globally
+RUN npm install --legacy-peer-deps
 RUN npm install --global pm2
 
 # Copy package.json and package-lock.json before other files
